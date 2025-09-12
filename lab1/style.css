@@ -1,102 +1,107 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;          
+    padding: 0;         
+    box-sizing: border-box; 
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: #000;
-    line-height: 1.6;
-    background-color: #fff;
-    margin: 0;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px;                   
+    font-weight: 400;                  
+    color: #000;                      
+    line-height: 1.6;                  
+    background-color: #fff;            
+    margin: 0;         
+                    
 }
 
-/* Заголовки */
 h1 {
-    font-size: 28px;
-    font-weight: 700;
-    margin: 20px 0;
+    font-size: 28px;      
+    font-weight: 700;     
+    margin: 20px 0;       
 }
 
 h2 {
-    font-size: 22px;
-    font-weight: 700;
-    margin: 20px 0 10px;
+    font-size: 22px;      
+    font-weight: 700;     
+    margin: 20px 0 10px;  
 }
 
-/* Навигация */
 nav {
-    margin-bottom: 20px;
+    margin-bottom: 20px;  
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    list-style: none;     
+    display: flex;        /*для горизонтального расположения*/
+    gap: 20px;          /*для отступа между колонками и рядами*/  
 }
 
 nav li {
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
+    font-size: 18px;      
+    font-weight: 500;     
+    cursor: pointer;      
 }
 
+/* Эффект при наведении на пункт меню */
 nav li:hover {
-    text-decoration: underline;
+    text-decoration: underline; 
 }
 
-/* Изображения */
+
 img {
-    width: 60%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 5px;
+    width: 60%;           
+    height: auto;         
+    margin: 20px 0;       
+    border-radius: 5px;   
 }
 
-/* Секции */
+
 section {
-    margin-bottom: 30px;
+    margin-bottom: 30px;  
 }
 
-/* Таблицы */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    border: #000;
+    width: 100%;          
+    border-collapse: collapse;   
+    margin-top: 15px;     
+    border: #000;         
 }
+
 
 th, td {
-    border: 1px solid #000;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
+    border: 1px solid #000; 
+    padding: 10px;         
+    text-align: center;    
+    font-size: 16px;       
 }
 
-/* Подвал */
+/* Контейнер с отступами */
+.container {
+    padding: 30px;
+}
+
+/* Футер теперь всегда во всю ширину */
 footer {
-    width: 100%;            
-    background: #000;
-    color: #fff;
+    background-color: black;
+    color: white;
     text-align: center;
-    padding: 15px 0;    
+    padding: 20px;
     margin-top: 30px;
 }
-
 nav a {
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    color: #000;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    text-decoration: none;        
+    font-family: 'Roboto', sans-serif; 
+    font-size: 18px;              
+    color: #000;                 
+    font-weight: 500;             
+    transition: color 0.3s ease;  
 }
 
 nav a:hover {
-    color: #ff6600; 
+    color: #ff6600;               
 }
