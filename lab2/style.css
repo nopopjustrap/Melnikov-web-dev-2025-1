@@ -106,7 +106,7 @@ main {
     cursor: pointer;
     background-color: white;
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
-    transition: border 0.3s ease;
+    
 }
 
 .bluda > div:hover, .mainbluda > div:hover, .drinks > div:hover {
@@ -114,8 +114,8 @@ main {
 }
 
 .bluda > div:hover button, .mainbluda > div:hover button, .drinks > div:hover button {
-    background-color: tomato;
-    color: white;
+    background-color: rgb(210, 208, 208);
+    color: black;
 }
 
 /* Image */
