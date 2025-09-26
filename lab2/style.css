@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;          
+    padding: 0;         
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px;                   
+    font-weight: 400;                  
+    color: #000;                      
+    line-height: 1.6;                  
+    background-color: #fff;            
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigationbar{
+    margin: 150px;
+}
+
+div.navigationbar{
+    margin: 10px;
+}
+
+h1 {
+    font-size: 28px;      
+    font-weight: 700;     
+    margin: 20px 0;       
+}
+
+h2 {
+    font-size: 22px;      
+    font-weight: 700;     
+    margin: 20px 0 10px;  
+}
+
+/* Navigation styles */
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navigationbar ul {
+    list-style: none;     
+    display: flex;        
+    gap: 20px;          
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.navigationbar li {
+    font-size: 18px;      
+    font-weight: 500;     
+    cursor: pointer;      
+}
+
+/* Эффект при наведении на пункт меню */
+.navigationbar li:hover {
+    text-decoration: underline; 
+}
+
+.navigationbar a {
+    text-decoration: none;        
+    font-family: 'Roboto', sans-serif; 
+    font-size: 18px;              
+    color: #000;                 
+    font-weight: 500;             
+    transition: color 0.3s ease;  
+}
+
+.navigationbar a:hover {
+    color: #ff6600;               
+}
+
+.navigationbar a.active {
+    color: tomato;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Dishes grid */
+.bluda, .mainbluda, .drinks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Dish card */
+.bluda > div, .mainbluda > div, .drinks > div {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    background-color: white;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    transition: border 0.3s ease;
+}
+
+.bluda > div:hover, .mainbluda > div:hover, .drinks > div:hover {
+    border: 2px solid tomato;
+}
+
+.bluda > div:hover button, .mainbluda > div:hover button, .drinks > div:hover button {
+    background-color: tomato;
+    color: white;
+}
+
+/* Image */
+.bluda img, .mainbluda img, .drinks img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 35px;
+}
+
+/* Price */
+.bluda > div > p:nth-child(2), 
+.mainbluda > div > p:nth-child(2), 
+.drinks > div > p:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Dish name */
+.bluda > div > p:nth-child(3), 
+.mainbluda > div > p:nth-child(3), 
+.drinks > div > p:nth-child(3) {
+    font-size: 18px;
+    margin: 10px 0;
+    flex-grow: 1;
+}
+
+/* Weight/volume */
+.bluda > div > p:nth-child(4), 
+.mainbluda > div > p:nth-child(4), 
+.drinks > div > p:nth-child(4) {
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Button */
+.bluda button, .mainbluda button, .drinks button {
+    background-color: #f1eee9;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .bluda, .mainbluda, .drinks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .navigationbar ul {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        text-align: center;
+    }
+    
+    .navigationbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .navigationbar a {
+        font-size: 22px;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    .bluda, .mainbluda, .drinks {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    table {
+        font-size: 12px;
+    }
+    
+    table th, table td {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
