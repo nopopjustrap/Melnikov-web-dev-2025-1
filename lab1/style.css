@@ -1,15 +1,15 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 
 * {
     margin: 0;          
     padding: 0;         
     box-sizing: border-box; 
 }
-.navigationbar a.active {
-    color: tomato;
-}   
+
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif; 
     font-size: 16px;                   
@@ -17,8 +17,29 @@ body {
     color: #000;                      
     line-height: 1.6;                  
     background-color: #fff;            
-    margin: 0;          
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    flex: 1;
+}
+
+.navigationbar a.active {
+    color: tomato;
+}   
+
 .navigationbar{
     margin: 150px;
 }
@@ -26,6 +47,7 @@ body {
 div.navigationbar{
     margin: 10px;
 }
+
 h1 {
     font-size: 28px;      
     font-weight: 700;     
@@ -44,8 +66,8 @@ nav {
 
 nav ul {
     list-style: none;     
-    display: flex;        /*для горизонтального расположения*/
-    gap: 20px;          /*для отступа между колонками и рядами*/  
+    display: flex;        
+    gap: 20px;            
 }
 
 nav li {
@@ -54,12 +76,9 @@ nav li {
     cursor: pointer;      
 }
 
-/* Эффект при наведении на пункт меню */
 nav li:hover {
     text-decoration: underline; 
 }
-
-
 
 img {
     width: 60%;           
@@ -67,7 +86,6 @@ img {
     margin: 20px 0;       
     border-radius: 5px;   
 }
-
 
 section {
     margin-bottom: 30px;  
@@ -80,7 +98,6 @@ table {
     border: #000;         
 }
 
-
 th, td {
     border: 1px solid #000; 
     padding: 10px;         
@@ -88,22 +105,23 @@ th, td {
     font-size: 16px;       
 }
 
-/* Контейнер с отступами */
-.container {
-    padding: 30px;
-}
-
-/* Футер теперь всегда во всю ширину */
 footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    width: 100%;
 }
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
 }
+
 nav a {
     text-decoration: none;        
     font-family: 'Roboto', sans-serif; 
@@ -115,4 +133,77 @@ nav a {
 
 nav a:hover {
     color: #ff6600;               
+}
+
+/* Медиа-запрос для ширины ≤800px */
+@media (max-width: 800px) {
+    nav ul {
+        justify-content: space-between;
+    }
+    
+    img {
+        width: 500px;
+        max-width: 100%;
+    }
+}
+
+/* Медиа-запрос для ширины ≤600px */
+@media (max-width: 600px) {
+    h1 {
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    nav a {
+        font-size: 22px;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    th, td {
+        font-size: 14px;
+    }
+    
+    .navigationbar {
+        margin: 50px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Медиа-запрос для ширины ≤400px */
+@media (max-width: 400px) {
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .navigationbar {
+        margin: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    nav a {
+        font-size: 20px;
+    }
 }
