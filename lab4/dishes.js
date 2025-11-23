@@ -1,4 +1,3 @@
-// dishes.js
 const dishes = [
     {
         keyword: "gazpacho",

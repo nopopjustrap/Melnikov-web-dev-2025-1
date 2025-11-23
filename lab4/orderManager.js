@@ -1,10 +1,12 @@
-// orderManager.js
+
+// Объект для хранения выбранных блюд по категориям
 let selectedDishes = {
     soup: null,
     main_course: null,
     drink: null
 };
 
+// Инициализация функционала выбора блюд
 function initializeDishSelection() {
     // Добавляем обработчики для кнопок "Добавить"
     document.addEventListener('click', function(e) {
@@ -19,10 +21,10 @@ function initializeDishSelection() {
         }
     });
     
-    // Инициализируем отображение заказа
     updateOrderDisplay();
 }
 
+// Функция выбора блюда
 function selectDish(dish) {
     // Снимаем выделение со всех блюд в этой категории
     const categoryDishes = document.querySelectorAll('.dish-item');
@@ -39,24 +41,21 @@ function selectDish(dish) {
         selectedElement.classList.add('selected');
     }
     
-    // Сохраняем выбранное блюдо
     selectedDishes[dish.category] = dish;
     
-    // Обновляем отображение заказа
     updateOrderDisplay();
     updateFormSelects();
 }
 
+// Обновление отображения выбранных блюд
 function updateOrderDisplay() {
     const orderSection = document.querySelector('.order-section');
     if (!orderSection) return;
     
-    // Находим или создаем контейнер для отображения выбранных блюд
     let selectedDishesContainer = document.querySelector('.selected-dishes-container');
     if (!selectedDishesContainer) {
         selectedDishesContainer = document.createElement('div');
         selectedDishesContainer.className = 'selected-dishes-container';
-        // Вставляем перед формой
         const form = orderSection.querySelector('.order-form');
         orderSection.insertBefore(selectedDishesContainer, form);
     }
@@ -75,7 +74,6 @@ function updateOrderDisplay() {
     
     let html = '<div class="selected-dishes"><h3>Ваш выбор</h3>';
     
-    // Отображаем выбранные блюда по категориям
     const categories = [
         { key: 'soup', name: 'Суп' },
         { key: 'main_course', name: 'Главное блюдо' },
@@ -99,10 +97,10 @@ function updateOrderDisplay() {
     html += '</div>';
     selectedDishesContainer.innerHTML = html;
     
-    // Показываем блок с ценой
     showPriceBlock();
 }
 
+// Получение текста для невыбранных блюд
 function getNotSelectedText(category) {
     const texts = {
         soup: 'Суп не выбран',
@@ -112,8 +110,8 @@ function getNotSelectedText(category) {
     return texts[category] || 'Блюдо не выбрано';
 }
 
+// Обновление выпадающих списков в форме
 function updateFormSelects() {
-    // Обновляем выпадающие списки в форме
     if (selectedDishes.soup) {
         document.getElementById('soup').value = selectedDishes.soup.keyword;
     }
@@ -125,6 +123,7 @@ function updateFormSelects() {
     }
 }
 
+// Показ блока с общей стоимостью
 function showPriceBlock() {
     let priceBlock = document.querySelector('.price-block');
     if (!priceBlock) {
@@ -142,6 +141,7 @@ function showPriceBlock() {
     `;
 }
 
+// Скрытие блока с ценой
 function hidePriceBlock() {
     const priceBlock = document.querySelector('.price-block');
     if (priceBlock) {
@@ -149,6 +149,7 @@ function hidePriceBlock() {
     }
 }
 
+// Расчет общей стоимости заказа
 function calculateTotalPrice() {
     return Object.values(selectedDishes)
         .filter(dish => dish !== null)
