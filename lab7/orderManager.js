@@ -10,15 +10,24 @@ let selectedDishes = {
 
 // Инициализация функционала выбора блюд
 function initializeDishSelection() {
+    console.log('Инициализация выбора блюд...');
+    
     // Добавляем обработчики для кнопок "Добавить"
     document.addEventListener('click', function(e) {
         if (e.target.classList.contains('add-btn')) {
+            console.log('Нажата кнопка Добавить');
             const dishElement = e.target.closest('.dish-item');
             const dishKeyword = dishElement.getAttribute('data-dish');
-            const dish = dishes.find(d => d.keyword === dishKeyword);
+            
+            // Используем window.dishes вместо dishes
+            const dish = window.dishes.find(d => d.keyword === dishKeyword);
             
             if (dish) {
+                console.log('Найдено блюдо:', dish.name);
                 selectDish(dish);
+            } else {
+                console.error('Блюдо не найдено по keyword:', dishKeyword);
+                console.log('Доступные блюда:', window.dishes);
             }
         }
     });
@@ -29,10 +38,12 @@ function initializeDishSelection() {
 
 // Функция выбора блюда
 function selectDish(dish) {
+    console.log('Выбрано блюдо:', dish.name);
+    
     // Снимаем выделение со всех блюд в этой категории
     const categoryDishes = document.querySelectorAll('.dish-item');
     categoryDishes.forEach(item => {
-        const itemDish = dishes.find(d => d.keyword === item.getAttribute('data-dish'));
+        const itemDish = window.dishes.find(d => d.keyword === item.getAttribute('data-dish'));
         if (itemDish && itemDish.category === dish.category) {
             item.classList.remove('selected');
         }
@@ -150,3 +161,8 @@ function calculateTotalPrice() {
         .filter(dish => dish !== null)
         .reduce((total, dish) => total + dish.price, 0);
 }
+
+// Делаем функции глобально доступными
+window.initializeDishSelection = initializeDishSelection;
+window.selectDish = selectDish;
+window.updateOrderDisplay = updateOrderDisplay;

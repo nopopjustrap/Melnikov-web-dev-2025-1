@@ -88,4 +88,5 @@ function initializeLunchValidator() {
     });
 }
 
+// Запуск
 document.addEventListener("DOMContentLoaded", initializeLunchValidator);

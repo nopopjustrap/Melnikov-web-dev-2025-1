@@ -7,7 +7,7 @@ const dishes = [
         category: "soup",
         count: "350 г",
         image: "images/gazpacho.jpg",
-        kind: "veg" // вегетарианский
+        kind: "veg" 
     },
     {
         keyword: "mushroom_soup",
@@ -16,7 +16,7 @@ const dishes = [
         category: "soup",
         count: "330 г",
         image: "images/mushroom_soup.jpg",
-        kind: "veg" // вегетарианский
+        kind: "veg" 
     },
     {
         keyword: "norwegian_soup",
@@ -25,7 +25,7 @@ const dishes = [
         category: "soup",
         count: "330 г",
         image: "images/norwegian_soup.jpg",
-        kind: "fish" // рыбный
+        kind: "fish" 
     },
     {
         keyword: "salmon_soup",
@@ -34,7 +34,7 @@ const dishes = [
         category: "soup",
         count: "350 г",
         image: "images/salmon_soup.jpeg",
-        kind: "fish" // рыбный
+        kind: "fish" 
     },
     {
         keyword: "chicken_soup",
@@ -43,7 +43,7 @@ const dishes = [
         category: "soup",
         count: "350 г",
         image: "images/chicken_soup.jpeg",
-        kind: "meat" // мясной
+        kind: "meat"
     },
     {
         keyword: "beef_soup",
@@ -52,7 +52,7 @@ const dishes = [
         category: "soup",
         count: "350 г",
         image: "images/beef_soup.jpeg",
-        kind: "meat" // мясной
+        kind: "meat" 
     },
 
     // Главные блюда (6 блюд)
@@ -63,7 +63,7 @@ const dishes = [
         category: "main_course",
         count: "250 г",
         image: "images/friedpotatoeswithmushrooms1.jpg",
-        kind: "veg" // вегетарианское
+        kind: "veg" 
     },
     {
         keyword: "lasagna",
@@ -72,7 +72,7 @@ const dishes = [
         category: "main_course",
         count: "310 г",
         image: "images/lasagna.jpg",
-        kind: "meat" // мясное
+        kind: "meat" 
     },
     {
         keyword: "chicken_cutlets",
@@ -81,7 +81,7 @@ const dishes = [
         category: "main_course",
         count: "280 г",
         image: "images/chickencutletsandmashedpotatoes.jpg",
-        kind: "meat" // мясное
+        kind: "meat" 
     },
     {
         keyword: "grilled_salmon",
@@ -90,7 +90,7 @@ const dishes = [
         category: "main_course",
         count: "300 г",
         image: "images/grilled_salmon.jpeg",
-        kind: "fish" // рыбное
+        kind: "fish" 
     },
     {
         keyword: "vegetable_stew",
@@ -99,7 +99,7 @@ const dishes = [
         category: "main_course",
         count: "300 г",
         image: "images/vegetable_stew.jpeg",
-        kind: "veg" // вегетарианское
+        kind: "veg" 
     },
     {
         keyword: "fried_fish",
@@ -108,7 +108,7 @@ const dishes = [
         category: "main_course",
         count: "320 г",
         image: "images/fried_fish.jpeg",
-        kind: "fish" // рыбное
+        kind: "fish" 
     },
 
     // Салаты и стартеры (6 блюд)
@@ -119,7 +119,7 @@ const dishes = [
         category: "salad",
         count: "250 г",
         image: "images/caesar_salad.jpg",
-        kind: "meat" // мясной
+        kind: "meat" 
     },
     {
         keyword: "shrimp_salad",
@@ -128,7 +128,7 @@ const dishes = [
         category: "salad",
         count: "230 г",
         image: "images/shrimp_salad.jpeg",
-        kind: "fish" // рыбный
+        kind: "fish" 
     },
     {
         keyword: "greek_salad",
@@ -137,7 +137,7 @@ const dishes = [
         category: "salad",
         count: "280 г",
         image: "images/greek_salad.jpg",
-        kind: "veg" // вегетарианский
+        kind: "veg" 
     },
     {
         keyword: "vegetable_salad",
@@ -146,7 +146,7 @@ const dishes = [
         category: "salad",
         count: "270 г",
         image: "images/vegetable_salad.jpg",
-        kind: "veg" // вегетарианский
+        kind: "veg"
     },
     {
         keyword: "fruit_salad",
@@ -155,7 +155,7 @@ const dishes = [
         category: "salad",
         count: "250 г",
         image: "images/fruit_salad.jpeg",
-        kind: "veg" // вегетарианский
+        kind: "veg" 
     },
     {
         keyword: "cheese_plate",
@@ -164,7 +164,7 @@ const dishes = [
         category: "salad",
         count: "200 г",
         image: "images/cheese_plate.jpg",
-        kind: "veg" // вегетарианский
+        kind: "veg"
     },
 
     // Напитки (6 блюд)
@@ -175,7 +175,7 @@ const dishes = [
         category: "drink",
         count: "300 мл",
         image: "images/orangejuice.jpg",
-        kind: "cold" // холодный
+        kind: "cold" 
     },
     {
         keyword: "apple_juice",
@@ -184,7 +184,7 @@ const dishes = [
         category: "drink",
         count: "300 мл",
         image: "images/applejuice.jpg",
-        kind: "cold" // холодный
+        kind: "cold" 
     },
     {
         keyword: "carrot_juice",
@@ -193,7 +193,7 @@ const dishes = [
         category: "drink",
         count: "300 мл",
         image: "images/carrotjuice.jpg",
-        kind: "cold" // холодный
+        kind: "cold"
     },
     {
         keyword: "coffee",
@@ -202,7 +202,7 @@ const dishes = [
         category: "drink",
         count: "250 мл",
         image: "images/coffee.jpg",
-        kind: "hot" // горячий
+        kind: "hot"
     },
     {
         keyword: "tea",
@@ -211,7 +211,7 @@ const dishes = [
         category: "drink",
         count: "300 мл",
         image: "images/tea.jpg",
-        kind: "hot" // горячий
+        kind: "hot"
     },
     {
         keyword: "hot_chocolate",
@@ -220,7 +220,7 @@ const dishes = [
         category: "drink",
         count: "250 мл",
         image: "images/hot_chocolate.jpg",
-        kind: "hot" // горячий
+        kind: "hot" 
     },
 
     // Десерты (6 блюд)
@@ -231,7 +231,7 @@ const dishes = [
         category: "dessert",
         count: "150 г",
         image: "images/chocolate_cake.jpeg",
-        kind: "small" // маленькая порция
+        kind: "small"
     },
     {
         keyword: "cheesecake",
@@ -240,7 +240,7 @@ const dishes = [
         category: "dessert",
         count: "180 г",
         image: "images/cheesecake.jpeg",
-        kind: "small" // маленькая порция
+        kind: "small" 
     },
     {
         keyword: "ice_cream",
@@ -249,7 +249,7 @@ const dishes = [
         category: "dessert",
         count: "120 г",
         image: "images/ice_cream.jpeg",
-        kind: "small" // маленькая порция
+        kind: "small" 
     },
     {
         keyword: "apple_pie",
@@ -258,7 +258,7 @@ const dishes = [
         category: "dessert",
         count: "200 г",
         image: "images/apple_pie.jpeg",
-        kind: "medium" // средняя порция
+        kind: "medium" 
     },
     {
         keyword: "pancakes",
@@ -267,7 +267,7 @@ const dishes = [
         category: "dessert",
         count: "220 г",
         image: "images/pancakes.jpg",
-        kind: "medium" // средняя порция
+        kind: "medium" 
     },
     {
         keyword: "big_cake",
@@ -276,6 +276,6 @@ const dishes = [
         category: "dessert",
         count: "300 г",
         image: "images/big_cake.jpeg",
-        kind: "large" // большая порция
+        kind: "large"
     }
 ];
