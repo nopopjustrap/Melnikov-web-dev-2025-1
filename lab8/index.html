@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Лабораторная работа №6</title>
+    <script src="dishes.js"></script>
+    <script src="displayDishes.js"></script>
+    <script src="filter.js"></script>
+    <script src="orderManager.js"></script>
+    <script src="lunchValidator.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Food Construt</h1>
+            <div class="navigationbar">
+                <ul>
+                    <li><a href="https://nopopjustrap.github.io/Melnikov-web-dev-2025-1/lab1/index.html">О нас</a></li>
+                    <li><a href="#collectorder" class="active">Собрать ланч</a></li>
+                    <li><a href="checkout.html">Оформить заказ</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section class="lunch-variants">
+                <h2>Доступные для заказа варианты ланча</h2>
+                <div class="variants-grid">
+                    <!-- Вариант 1 -->
+                    <div class="variant-block">
+                        <div class="variant-dishes">
+                            <div class="variant-dish">
+                                <img src="images/soup.png" alt="Суп">
+                                <span>Суп</span>
+                            </div>
+                            <div class="variant-dish">
+                                <img src="images/main.png" alt="Главное блюдо">
+                                <span>Главное блюдо</span>
+                            </div>
+                            <div class="variant-dish">
+                                <img src="images/salad.png" alt="Салат">
+                                <span>Салат</span>
+                            </div>
+                            <div class="variant-dish">
+                                <img src="images/drink.png" alt="Напиток">
+                                <span>Напиток</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Вариант 2 -->
+                    <div class="variant-block">
+                        <div class="variant-dishes">
+                            <div class="variant-dish">
+                                <img src="images/soup.png" alt="Суп">
+                                <span>Суп</span>
+                            </div>
+                            <div class="variant-dish">
+                                <img src="images/main.png" alt="Главное блюдо">
+                                <span>Главное блюдо</span>
+                            </div>
+                            <div class="variant-dish">
+                                <img src="images/drink.png" alt="Напиток">
+                                <span>Напиток</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Вариант 3 -->
+                    <div class="variant-block">
+                        <div class="variant-dishes">
+                            <div class="variant-dish">
+                                <img src="images/soup.png" alt="Суп">
+                                <span>Суп</span>
+                            </div>
+                            <div class="variant-dish">
+                                <img src="images/salad.png" alt="Салат">
+                                <span>Салат</span>
+                            </div>
+                            <div class="variant-dish">
+                                <img src="images/drink.png" alt="Напиток">
+                                <span>Напиток</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Вариант 4 -->
+                    <div class="variant-block">
+                        <div class="variant-dishes">
+                            <div class="variant-dish">
+                                <img src="images/main.png" alt="Главное блюдо">
+                                <span>Главное блюдо</span>
+                            </div>
+                            <div class="variant-dish">
+                                <img src="images/salad.png" alt="Салат">
+                                <span>Салат</span>
+                            </div>
+                            <div class="variant-dish">
+                                <img src="images/drink.png" alt="Напиток">
+                                <span>Напиток</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Вариант 5 -->
+                    <div class="variant-block">
+                        <div class="variant-dishes">
+                            <div class="variant-dish">
+                                <img src="images/main.png" alt="Главное блюдо">
+                                <span>Главное блюдо</span>
+                            </div>
+                            <div class="variant-dish">
+                                <img src="images/drink.png" alt="Напиток">
+                                <span>Напиток</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="variant-block desserts-info">
+                        <div class="dessert-content">
+                            <div class="dessert-example">
+                                <img src="images/desert.png" alt="Десерт">
+                                <span>Десерт</span>
+                            </div>
+                            <p class="dessert-note">Можно добавить к любому заказу</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Супы -->
+            <section>
+                <h2>Выберите суп</h2>
+                <div class="filters" id="soup-filters">
+                    <button class="filter-btn" data-kind="fish">рыбный</button>
+                    <button class="filter-btn" data-kind="meat">мясной</button>
+                    <button class="filter-btn" data-kind="veg">вегетарианский</button>
+                </div>
+                <div class="bluda dishes-container">
+                </div> 
+            </section>
+
+            <!-- Главные блюда -->
+            <section>
+                <h2>Выберите главное блюдо</h2>
+                <div class="filters" id="main-course-filters">
+                    <button class="filter-btn" data-kind="fish">рыбное</button>
+                    <button class="filter-btn" data-kind="meat">мясное</button>
+                    <button class="filter-btn" data-kind="veg">вегетарианское</button>
+                </div>
+                <div class="mainbluda dishes-container">
+                </div> 
+            </section>
+
+            <!-- Салаты и стартеры -->
+            <section>
+                <h2>Выберите салат или стартер</h2>
+                <div class="filters" id="salad-filters">
+                    <button class="filter-btn" data-kind="fish">рыбный</button>
+                    <button class="filter-btn" data-kind="meat">мясной</button>
+                    <button class="filter-btn" data-kind="veg">вегетарианский</button>
+                </div>
+                <div class="salads dishes-container">
+                </div> 
+            </section>
+
+            <!-- Напитки -->
+            <section>
+                <h2>Выберите напиток</h2>
+                <div class="filters" id="drink-filters">
+                    <button class="filter-btn" data-kind="cold">холодный</button>
+                    <button class="filter-btn" data-kind="hot">горячий</button>
+                </div>
+                <div class="drinks dishes-container">
+                </div> 
+            </section>
+
+            <!-- Десерты -->
+            <section>
+                <h2>Выберите десерт</h2>
+                <div class="filters" id="dessert-filters">
+                    <button class="filter-btn" data-kind="small">маленькая порция</button>
+                    <button class="filter-btn" data-kind="medium">средняя порция</button>
+                    <button class="filter-btn" data-kind="large">большая порция</button>
+                </div>
+                <div class="desserts dishes-container">
+                </div> 
+            </section>
+
+            <section class="order-section" id="collectorder">
+                <h2>Сделать заказ</h2>
+                <!-- Сюда будет вставляться блок с выбранными блюдами -->
+                <!-- И панель оформления заказа -->
+            </section>
+        </main>
+        
+        <footer id="contacts">
+            <div class="footer-content">
+                <a href="tel:+7-000-000-00-00">Позвоните нам +7-000-000-00-00</a>
+            </div>
+        </footer>
+    </div>
+
+    <div class="notification-overlay" id="notification">
+        <div class="notification-box">
+            <div class="notification-message">Пожалуйста, выберите все блюда перед отправкой.</div>
+            <button class="notification-btn" id="notification-ok">Окей</button>
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>
