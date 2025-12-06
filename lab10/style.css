@@ -1,0 +1,483 @@
+/* Кастомные стили для лендинга */
+.landing-section {
+    padding: 80px 0;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.feature-icon i {
+    font-size: 30px;
+    color: white;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.contact-section {
+    background: #f8f9fa;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.contact-icon {
+    color: #667eea;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-cta {
+    background: white;
+    color: #f5576c;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 40px 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #667eea;
+}
+
+/* Анимации */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .landing-section {
+        padding: 50px 0;
+    }
+    
+    .cta-section, .hero-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .btn-cta {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* Дополнительные стили для навигации */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Стили для формы */
+.form-check-input:checked {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+/* Стили для социальных иконок в футере */
+.footer .social-icons a:hover {
+    color: #667eea;
+    transform: translateY(-3px);
+}
+
+/* Стили для разделителя */
+hr.opacity-25 {
+    opacity: 0.25;
+}
+/* Дополним существующие стили для иконок соцсетей */
+
+/* Иконки соцсетей в контактной секции */
+.contact-section .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    color: #667eea;
+    font-size: 18px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-section .social-icons a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Иконки соцсетей в футере */
+.footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    background: white;
+    color: #667eea;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Иконки преимуществ - делаем их более заметными */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.feature-icon i {
+    font-size: 36px;
+    color: white;
+}
+
+/* Иконки контактов - увеличиваем и делаем более заметными */
+.contact-icon {
+    color: #667eea;
+    font-size: 28px;
+    margin-right: 15px;
+    width: 40px;
+    text-align: center;
+}
+
+/* Анимация для иконок при наведении */
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* Дополнительные стили для лучшей видимости */
+.contact-info h3 {
+    color: #333;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.contact-info h5 {
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.contact-info .text-muted {
+    color: #666 !important;
+    font-size: 16px;
+}
+
+/* Стили для секции преимуществ */
+#features h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#features .lead {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.feature-card h4 {
+    color: #333;
+    min-height: 60px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Улучшаем видимость CTA кнопки */
+.btn-cta {
+    background: white;
+    color: #f5576c;
+    padding: 18px 45px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    background: white;
+    color: #f5576c;
+}
+
+/* Улучшаем видимость основной кнопки */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 14px 35px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4090 100%);
+}
+
+/* Делаем лого в навигации более заметным */
+.navbar-brand span:first-child {
+    color: #667eea;
+    font-weight: 800;
+}
+
+.navbar-brand span:last-child {
+    color: #764ba2;
+    font-weight: 800;
+}
+
+/* Делаем активные пункты меню заметными */
+.navbar-nav .nav-link.active {
+    color: #667eea !important;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #667eea !important;
+}
+
+/* Улучшаем видимость формы */
+.form-control {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+/* Делаем чекбокс более заметным */
+.form-check-input:checked {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+.form-check-label {
+    color: #555;
+    cursor: pointer;
+}
+
+/* Улучшаем видимость заголовков секций */
+.display-4 {
+    color: #333;
+    font-weight: 800;
+}
+
+.lead {
+    color: #666;
+    font-size: 1.25rem;
+}
+
+/* Делаем цифры в "Как это работает" более заметными */
+.display-1 {
+    color: #667eea;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Улучшаем видимость текста в hero секции */
+.hero-title {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Делаем кнопки в hero более заметными */
+.btn-light {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-light:hover {
+    background: white;
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.contact-section .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; 
+    height: 60px; 
+    background: #f8f9fa;
+    border-radius: 50%;
+    color: #667eea;
+    font-size: 30px; /* Увеличили с 18px */
+    margin: 0 8px;   /* Увеличили отступ */
+    transition: all 0.3s ease;
+    border: 2px solid #eaeaea;
+}
+
+.contact-section .social-icons a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-5px) scale(1.1); /* Усилили эффект */
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+    border-color: #667eea;
+}
